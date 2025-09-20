@@ -1,14 +1,3 @@
-# Imported Libraries 
-import requests 
-from bs4 import BeautifulSoup 
-import random 
-import pandas as pd
-from io import StringIO
-import re
-import seaborn as sns 
-import matplotlib.pyplot as plt
-
-
 user_agents = [
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
@@ -42,11 +31,11 @@ df = a[0]
 
 # Data cleaning
 # Check data for info/ variables
-# df.info()
-# print(df.info())
+df.info()
+
 
 
 # Remove Ref col as it is not needed
 df.drop(columns='Ref', inplace=True)
-# print(df)
+print(df)
 
