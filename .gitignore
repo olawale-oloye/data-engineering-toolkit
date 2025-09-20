@@ -1,0 +1,20 @@
+# Git Ignore Configurations
+
+# Enivorment
+.env
+*.env
+.env.*
+
+
+# Python
+__pycahe__/
+env/
+venv/
+.venv/
+
+
+# IDE
+.vscode/
+
+
+
