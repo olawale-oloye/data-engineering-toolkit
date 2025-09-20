@@ -1,9 +1,4 @@
 # Imported Libraries 
-import requests 
-from bs4 import BeautifulSoup 
-import random 
-import pandas as pd
-from io import StringIO
 import re
 import seaborn as sns 
 import matplotlib.pyplot as plt
@@ -42,22 +37,6 @@ df = a[0]
 
 # Data cleaning
 # Check data for info/ variables
-# df.info()
-# print(df.info())
+df.info()
 
 
-# Remove Ref col as it is not needed
-df.drop(columns='Ref', inplace=True)
-# print(df)
-
-df['Average weight (lb)'] = df['Average weight'].apply(lambda x: float(re.findall(r"\d+\.\d+", x)[1]) )
-df['Average weight (Kg)'] = df['Average weight'].apply(lambda x: float(re.findall(r"\d+\.\d+", x)[0]) )
-df.drop(columns = 'Average weight' , inplace=True)
-df.rename(columns = {'Adult population (millions)': 'Adult population (M)'}, inplace=True)
-df['% Overweight'] = df['% Overweight'].apply(lambda x: float(re.findall(r'\d+\.\d', x)[0]) )
-
-print(df)
-
-sns.barplot(x=df['Region'], y=df['Average weight (Kg)'], hue=df['Region'])
-plt.xticks(rotation= 70)
-plt.show()
