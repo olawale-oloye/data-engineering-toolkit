@@ -15,7 +15,7 @@ Data Engineering Community - LaunchPad Mentorship Programme : Git Task
    ![Update gitignore](image-2.png)
 7. Create an env for secrets
 8. Install Python Virtual Environment (venv) named as ".venv" using "python -m venv .venv"
-9. Install relevant libraries
+9. Install relevant libraries (pandas, seaborn, matplotlib, requests, psycopg2)
 10. Develop requirements.txt using "pip freeze >> requirements.txt"
 
 # Code Examples
